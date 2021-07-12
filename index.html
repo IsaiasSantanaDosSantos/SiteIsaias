@@ -14,10 +14,12 @@
           <p>Buscando um novo desafio | HTML | CSS | JAVASCRIPT | GITHUB | MYSQL</p>
         </header>
       <nav>
-        <a href="index.html">Inicio</a>
-        <a href="portifolio.html">Portifólio</a>
-        <a href="sobremim.html">Sobre mim</a>
-        <a href="contato.html">Contato</a>
+        <div id="menu-cabeca">
+          <a href="index.html">Inicio</a>
+          <a href="portifolio.html">Portifólio</a>
+          <a href="sobremim.html">Sobre mim</a>
+          <a href="contato.html">Contato</a>
+        </div>
       </nav>
       <main>
       <div class="Introdução">
@@ -28,11 +30,11 @@
 
           Posso dizer que aos 35 anos descobrir o que realmente move o meu lado profissional, me inspirando a cada novo aprendizado.
         </p><br>
-        <h2>Principais tecnologias que desenvolvo:</h2>
+        <h2>Principais tecnologias que desenvolvo:</h2><br>
         <p>Este site foi foi devenvolvido com <abbr title="Linguagem de Marcação de Hipertexto">HTML5</abbr>, <abbr title="Folha de Estilo em Cascata">CSS3</abbr> e <abbr title="Linguagem de programação">JavaScript</abbr>.Subi para o repositório do <abbr title="Plataforma de hospedagem de código-fonte e arquivos com controle de versão">GitHub</abbr> todo conteúdo do código fonte. Sobre o <abbr title="Sistema de gerenciamento de banco de dados (Linguagem de Consulta Estruturada)">MySql</abbr> ainda não fiz o armazenamento no banco de dados, mas isso será o próximo passo deste projeto.</p>
-        <picture >
-          <source media="(max-width: 380px)" srcset="./img/todos-p.png" class="logos-p">
-          <img src="./img/todos.png" alt="tecnologias">
+        <picture>
+          <source media="(max-width: 400px)" srcset="./img/todos-p.png">
+          <img id="logos" src="./img/todos.png" alt="tecnologias">
         </picture>
         <p>É realmente incrível o poder e as possibilidades que essas tecnologias nos proporcionam. A cada aprendizado me sinto maravilhado com as elas, e logo serei um profissional do ramo,</p><br>
       </div>
