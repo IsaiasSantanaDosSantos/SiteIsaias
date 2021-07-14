@@ -4,6 +4,7 @@
 * { /*Configuração global*/
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 :root { /*Variáveis*/
@@ -82,6 +83,8 @@ main { /*Conteúdo do corpo*/
     display: block; /*Display em bloco*/  
 }
 
+/*  ########### Página portifólio ##########*/
+
 #projetos { /*Área projeto (em cima video)*/
     /*background-image: linear-gradient(to top, var(--cor02) , var(--cor00));*/ /*Fundo degradê*/
     padding: 15px;
@@ -90,89 +93,98 @@ main { /*Conteúdo do corpo*/
     text-align: center; /*Centrar texto*/
 }
 
-#principal {
-    width: 84%;
-    border-radius: 15px 15px 0px 0px;
+#principal { /*Espaço principal/projeto principal*/
+    width: 100%; /*Tela pequena*/
+    max-width: 522px; /*Tela grande*/
+    border-radius: 15px 15px 0px 0px; /*Arredondar vertices*/
 }
 
 #espaco_videos {
     background-color: var(--cor00);
-    width: 85%;
-    margin: auto;
-    border-radius: 0px 0px 15px 15px;
-    box-shadow: 0px 3px 10px var(--cor03);
-    padding: 0px 15px 15px 15px;
+    width: 100%; /*Em tela pequena*/
+    max-width: 522px; /*Em tela grande*/
+    margin: auto; /*Margem externa*/
+    border-radius: 0px 0px 15px 15px; /*Arredondar vertices*/
+    box-shadow: 0px 3px 10px var(--cor03); /*Sombra*/
+    padding: 0px 15px 15px 15px; /*Margem interna*/
 }
 
-#videos {
-    margin: 15px 15px 15px 21px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px var(--cor03);
-}
-
-.botao { /*Botão*/
-    background-color: var(--cor00); /*Cor botão*/
-    color: white; /*Cor fonte*/
-    border: none; /*Tirar bordas*/
-    cursor: pointer;
-    padding:15px; /*Margem interna*/
-    margin-top:20px ; /*Margem externa*/
-    border-radius: 15px; /*Arrendodar vértices*/
-    font-weight: bolder; /*Deixar fonte negrito*/
-    box-shadow: 0px 0px 10px var(--cor03);
-}
-.botao:hover { /*Ao passar o mouse*/
-    background-color: var(--cor02);
-    }
-.mais_projetos {  /*Area botão*/
-    position: relative;
-    display: inline-block; 
-    padding: 15px;
-}
-.filhos_suspensos {  /*Menu suspenso escoldido*/
-    display: none; /*Para sumir os itens do menu*/
-    background-color: var(--cor01); /*Cor do fundo*/
-    min-width: 200px; /*Largura mínima*/
-    padding: 10px; /*Margem interna*/
-    margin: 20px auto; /*Margem externa*/
-    text-align: center; /*Alinhamento de texto central*/
-}
-.filhos_suspensos a { /*Links do menu suspenso*/
-    background-color: var(--cor01); /*Cor fundo*/
-    color:var(--cor02); /*Cor da fonte*/
-    padding: 5px 5px; /*Margem interna ↑↓ e →← */
-    margin: 20px 4px 10px 4px; /*Margme extrena*/
-    text-decoration: none; /*Tirar linha a baixo*/
-    font-weight: bolder; /*Deixar fonte em negrite*/
-    display: inline; /*Manter o as opções do menu lado a lado*/
-   
-}
-.mais_projetos:hover .filhos_suspensos { /*Ao passar o mouse*/
-    display: block; /* Aparece a baixo*/
-    /*display: inline; (aparece a direita)*/ 
-}
-
-.filhos_suspensos a:hover { /*Ao passar o mouse sobre os links*/
-    color: var(--cor0); /*Cor do fondo*/
+#videos { /*Video principal*/
+    margin: 15px 15px 15px 21px; /*Margem externa*/
+    border-radius: 15px; /*Arredondar vertices*/
     box-shadow: 0px 0px 10px var(--cor03); /*Sombra*/
-    border-radius: 15px; /*Deixar bordas arredondadas*/
 }
 
-footer { /*Roda pé*/
-    background-image: linear-gradient(to bottom, var(--cor02)0%, var(--cor00)); /*Fundo degradê*/
-    color: var(--cor01); /*Cor de fonte*/
-    padding: 20px; /*Margem interna*/
+/*     ########## Menu de projetos  #########    */
+
+button, .button1 { /*Todos os botoes do menu*/
+    display: block; /*Posição em bloco*/
+    margin: 20px auto; /*Margem externa ↑↓ e →← */
+    background-color: var(--cor00); /*Cor do fundo*/
+    font-weight: bold; /* Fonte negrito*/
+    border-radius: 8px; /* Arredondar vertices*/
+    color: white; /*Cor da fonte*/
+    border: 0; /*Tirar toda borda de padrão*/
+    cursor: pointer; /*Aparecer mãozinha ao passar o mouse*/
+    padding: 6px 10px; /*Margem interna ↑↓ e →← */
+}
+
+button:hover, .button1:hover { /* Ao passar o mouse*/
+    box-shadow: 0px 0px 6px var(--cor03);
+}
+
+/*     ############# VERIFICADOR DE IDADE #########     */
+.popup-wrapper, .popup1-wrapper {
+    display: none; /*Para não aparecer, apenas quando chamar*/
+    background-color: rgb(0, 0, 0, .5); /*Cor do fundo*/
+    position: fixed; /*Posição fixada na tela*/
+    top: 0px; /*Tamanho desde o inicio do topo*/
+    left: 0px; /*Tamanho desde o inicio do lado esquerdo*/
+    width: 100%; /*Ocupar toda largura da tela*/
+    height: 100%; /*Ocupar toda altura da tela*/
+}
+.popup, .popup1 {
+    font-family: Arial, Helvetica, sans-serif; /*Tipo de fonte*/
     text-align: center; /*Centralizar texto*/
-    font-style: italic; /*Fonte italica*/
+    width: 100%; /*Telas menores*/
+    max-width: 340px; /*Telas maiores*/
+    margin: 10% auto; /*Para não ocupar todo topo e parte inferior da tela*/
+    padding: 20px; /*Margem interna*/
+    background-color: var(--cor01); /*Cor do fundo*/
+    position: relative; /*Posição relativa a .popup-wrapper*/
+    border-radius: 15px; /*Arredondar vertices*/
+}
+.popup a, .popup1 a {
+    color: var(--cor01); /*Cor da fonte*/
+    font-weight: bold; /*Fonte negrito*/
+    padding: 5px 25px; /*Margem interna*/
+    border-radius: 8px;
+    cursor: pointer; /*Aparecer mãozinha ao passar o mouse*/
+    text-decoration: none; /*Tirar traço a baixo do link*/
+    background-color: var(--cor00); /*Cor de fundo*/
 }
 
-footer a { /*Link*/
-    color: var(--cor01); /*Cor de fonte*/
-    text-decoration: none; /*Tirar linha a baixo*/
+.popup a:hover, .popup1 a:hover { /*Ao passar o mouse*/
+    box-shadow: 0px 0px 6px var(--cor03); /*sombra*/
 }
 
-footer a:hover { /*Ao passa o mouse sobre*/
-    color: var(--cor00); /*Cor da fonte*/
+.popup-content img, .popup1-content img { /*Vídeo da popup*/
+    border-radius: 15px; /*Arredondar vertices*/
+    margin: 4px; /*Margem externa*/
+    width: 100%;
+    max-width: 280px;
+}
+.popup-close, .popup1-close { /* 'X' de fechamento da popup*/
+    position: absolute; /*Relativo a .popup*/
+    top: 5px; /*Distância topo*/
+    padding: 4px 6px; /*Margem interna ↑↓ e →← */
+    right: 5px; /*Distância deireita*/
+    cursor: pointer; /*Aparecer mãozinha ao passar o mouse*/   
+}
+
+.popup-close:hover, .popup1-close:hover { /*Ao passar o mouse  no 'X' de fechamento da popup*/
+    box-shadow: 0px 0px 6px var(--cor03); /*Sombra*/
+    border-radius: 5px;
 }
 
 /* ########### Página Sobre Mim ########## */
@@ -306,5 +318,21 @@ textarea {
 #botão-f input:hover {
     box-shadow: 0px 0px 6px var(--cor03);
 }
+ /*   ######## Roda pé  ########      */
 
+ footer { /*Roda pé*/
+    background-image: linear-gradient(to bottom, var(--cor02)0%, var(--cor00)); /*Fundo degradê*/
+    color: var(--cor01); /*Cor de fonte*/
+    padding: 20px; /*Margem interna*/
+    text-align: center; /*Centralizar texto*/
+    font-style: italic; /*Fonte italica*/
+}
 
+footer a { /*Link*/
+    color: var(--cor01); /*Cor de fonte*/
+    text-decoration: none; /*Tirar linha a baixo*/
+}
+
+footer a:hover { /*Ao passa o mouse sobre*/
+    color: var(--cor00); /*Cor da fonte*/
+}
