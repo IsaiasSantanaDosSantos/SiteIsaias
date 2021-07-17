@@ -1,11 +1,20 @@
+
+
+
+/* ######## FORMÚLARIO PÁGINA CONTATO ###### */
+
 var nome = document.getElementById('txtnome')
 var email = document.getElementById('txtemail')
 var telefone = document.getElementById('txttel')
 var mensagem = document.getElementById('txtmsg')
 
+
+
 function enviar() { /* Função chamada ao clicar no botão enviar */
      var tel = Number(txttel.value) /* Converte valor da variável em número */
-     if (nome.value.length == 0 || email.value.length == 0 || telefone.value.length < 9 || mensagem.value.length == 0) { /* Se essas condições forem verdadeiras... */
+     var condEnvioMsg = (nome.value.length, email.value.length, mensagem.value.length === 0 || telefone.value.length < 9 )
+     
+     if (condEnvioMsg) { /* Se essas condições forem verdadeiras... */
          alert('Para enviar por favor preencha todos os dados.') /* Mostrará uma janela com essa mensagem */
      } else if (nome.value.length < 10) { /* Se o compo nome tiver menor que 10 caracteres... */
          alert('Por favor, digite seu nome completo.')
@@ -16,10 +25,12 @@ function enviar() { /* Função chamada ao clicar no botão enviar */
      } else if (mensagem.value.length == 0) { /* Se o campo mensagem não tiver caracteres nenhum... */
          alert('Só faltou digitar sua mensagem!')
      } else { /* Se nenhuma das opções anteriores forem verdadeiras... */
-         alert('Mensagem enviada com sucesso! Em breve retornaremos.')
-         
+        alert('Mensagem enviada com sucesso! Em breve retornaremos.')
+    
         } 
     }
+
+
 
     /* ########     BOTÃO VERIFICADOR DE IDADE ↓     ########   */
 

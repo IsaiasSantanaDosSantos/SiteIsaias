@@ -41,26 +41,32 @@ header h1 { /*Titulo cabeçalhio*/
     padding: 20px; /*Margem interna*/
 }
 
-nav { /*Area menu*/
-
+#menu-cabeca { /*Area menu*/
     background-image: linear-gradient(to top, var(--cor02)0%, var(--cor00)); /*Fundo degragê*/
     color: var(--cor01); /*Cor da fonte*/
     margin: auto; /*Margem externa*/
     padding: 20px; /*Margem interna*/
-    
+    width: 100%;   
 }
 
-nav a { /*Links do menu*/
+#menu-cabeca a { /*Links do menu*/
     text-decoration: none; /*Tirar linha de baixo*/
     color: var(--cor01); /*Cor da fonte*/
     font-size: large; /*Tamanho de fonte grande*/
     padding: 10px 20px;  /*Margem interna ↓↑ e →←*/
 }
 
-nav a:hover { /*Ao passar o mouse sobre os links do menu*/
+#menu-cabeca a:hover { /*Ao passar o mouse sobre os links do menu*/
     color: var(--cor01); /*Cor da fonte*/
     box-shadow: 0px 0px 10px var(--cor03); /*Sombra*/
     border-radius: 15px; /*Tirar vertises das bordas*/
+}
+
+
+#menu-cabeca {
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
 }
 
 main { /*Conteúdo do corpo*/
@@ -91,22 +97,25 @@ main { /*Conteúdo do corpo*/
     border-radius: 15px; /*Arredondar vertices*/
     box-shadow: 0px 0px 7px var(--cor03); /*Sombra*/
     text-align: center; /*Centrar texto*/
+    margin: auto;
 }
 
 #principal { /*Espaço principal/projeto principal*/
     width: 100%; /*Tela pequena*/
     max-width: 522px; /*Tela grande*/
     border-radius: 15px 15px 0px 0px; /*Arredondar vertices*/
+    margin: auto;
 }
 
 #espaco_videos {
     background-color: var(--cor00);
+    color: var(--cor01);
     width: 100%; /*Em tela pequena*/
     max-width: 522px; /*Em tela grande*/
     margin: auto; /*Margem externa*/
-    border-radius: 0px 0px 15px 15px; /*Arredondar vertices*/
+    border-radius: 8px 8px 8px 8px; /*Arredondar vertices*/
     box-shadow: 0px 3px 10px var(--cor03); /*Sombra*/
-    padding: 0px 15px 15px 15px; /*Margem interna*/
+    padding: 15px; /*Margem interna*/
 }
 
 #videos { /*Video principal*/
@@ -322,6 +331,7 @@ textarea {
     background-color: var(--cor00); /*Cor de fundo*/
     font-weight: bolder; /*Deixar texto negrito*/
     border: none; /*Tirar borda*/
+    cursor: pointer; /*Mostrar mãozinha quanto o mouse passar por cima*/
 }
 
 #botão-f input:hover { /*Ao passar mouse*/
