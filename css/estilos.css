@@ -338,6 +338,50 @@ textarea {
     box-shadow: 0px 0px 6px var(--cor03); /*Sombra*/
 }
 
+#popupDados-wrapper {
+    display: none;
+    background-color: rgba(112, 112, 243, 0.644);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#popupDados {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+}
+
+#inviarDados {
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    border: none;
+    margin: 6px -10px;
+    background-color: var(--cor00);
+    border-radius: 5px;
+}
+
+#inviarDados:hover {
+    box-shadow: 0px 0px 6px var(--cor03);
+}
+
+#popupDados-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
 /*  #####   CONTATO DIRETO    #####*/
 
 #logos-contato-direto h2 { /*Titulo da caixa*/

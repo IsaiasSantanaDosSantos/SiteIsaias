@@ -47,7 +47,16 @@
                     <textarea id="txtmsg" placeholder="Digite sua mensagem "></textarea>
                 </div>
                 <div id="botão-f">
-                    <input type="button" value="Enviar" onclick="enviar()">
+                    <input type="button" value="Enviar" onclick="conferirDados(), enviar()">
+                </div>
+                <div id="popupDados-wrapper">
+                    <div id="popupDados">
+                        <div id="popupDados-close">x</div>
+                        <div id="popupDados-content">
+                            <h2>Confira seus dados:</h2>
+                            <input id="inviarDados" type="button" value="Enviar">
+                        </div>
+                    </div>
                 </div>
             </form>
 

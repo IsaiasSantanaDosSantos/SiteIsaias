@@ -10,7 +10,7 @@ var mensagem = document.getElementById('txtmsg')
 
 
 
-function enviar() { /* Função chamada ao clicar no botão enviar */
+function conferirDados() { /* Função chamada ao clicar no botão enviar */
      var tel = Number(txttel.value) /* Converte valor da variável em número */
      var condEnvioMsg = (nome.value.length, email.value.length, mensagem.value.length === 0 || telefone.value.length < 9 )
      
@@ -26,8 +26,14 @@ function enviar() { /* Função chamada ao clicar no botão enviar */
          alert('Só faltou digitar sua mensagem!')
      } else { /* Se nenhuma das opções anteriores forem verdadeiras... */
         alert('Mensagem enviada com sucesso! Em breve retornaremos.')
-    
+         
         } 
+        /* Limpar campos do formulário  e iniciar novamente no nome piscando para digitar*/
+        nome.value = ''
+        email.value = ''
+        telefone.value = ''
+        mensagem.value = ''
+        nome.focus()
     }
 
 
