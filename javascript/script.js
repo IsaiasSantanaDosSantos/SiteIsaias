@@ -24,16 +24,33 @@ function conferirDados() { /* Função chamada ao clicar no botão enviar */
          alert('Por favor, digite o código de área do seu telefone.')
      } else if (mensagem.value.length == 0) { /* Se o campo mensagem não tiver caracteres nenhum... */
          alert('Só faltou digitar sua mensagem!')
-     } else { /* Se nenhuma das opções anteriores forem verdadeiras... */
-        alert('Mensagem enviada com sucesso! Em breve retornaremos.')
+     } else { /* Se nenhuma das opções anteriores forem verdadeiras... */ 
+        var nomeFormCont = nome.value //Pegar valor da variável nome
+        var emailFormCont = email.value //Pegar valor da variável email
+        let telefoneFormCont = telefone.value //Pegar valor da variável telefone
+        let mensagemFormCont = mensagem.value //Pegar valor da variável mensagem
+    
+        window.confirm(`CONFIRA OS DADOS?\nNome: ` + nomeFormCont + `\nE-mail: ` + emailFormCont + `\nTelefone: ` + telefoneFormCont + `\nMensagem: ` + mensagemFormCont) /* Confirmando os dados com 'confirm()' */
+        var dadosFormCont = {nome: `${nomeFormCont}`, email: `${emailFormCont}`,telefone: `${telefoneFormCont}`, mensagem: `${mensagemFormCont}`}
+        console.log(dadosFormCont)
+
+        
+
+           
+        
+
+
+
+
+
          
         } 
-        /* Limpar campos do formulário  e iniciar novamente no nome piscando para digitar*/
+        /* Limpar campos do formulário */ 
         nome.value = ''
         email.value = ''
         telefone.value = ''
         mensagem.value = ''
-        nome.focus()
+        nome.focus() /* Iniciar novamente no nome piscando para digitar*/
     }
 
 
@@ -43,8 +60,7 @@ function conferirDados() { /* Função chamada ao clicar no botão enviar */
     var button = document.querySelector('.button') /* Variável receber o valor do button do html*/
     var popup = document.querySelector('.popup-wrapper') /* Variável receber o valor .popup-wrapper do html*/
    
-    button.addEventListener('click', () => {
-     /* Colocar evento de click na variável button. 1º argumento 'click' e após o click o 2º argumento a função*/
+    button.addEventListener('click', () => { /* Colocar evento de click na variável button. 1º argumento 'click' e após o click o 2º argumento a função*/
         popup.style.display = 'block' /* Após clicar no botão aparece a janela que estava com display = none*/
     })
 
