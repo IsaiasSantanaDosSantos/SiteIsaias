@@ -1,7 +1,23 @@
-
 @charset "UTF-8";
 
-* { /*Configuração global*/
+@keyframes animationEsq { /*Animação imagens esquerdas*/
+    0% { transform: rotate(5deg);} /*Rotação*/
+    50% { transform: rotate(-5deg);} 
+    100% { transform: rotate(5deg);}  
+}
+
+@keyframes animationDir { /*Animação imagens direitas*/
+    0% { transform: rotate(-5deg);} /**/
+    40% { transform: rotate(5deg);}
+    100% {transform: rotate(-5deg);} 
+}
+
+@keyframes pisca-pisca {
+    0% {box-shadow: 2px 2px 6px var(--cor03);}
+    50% {box-shadow: 0px 0px px var(--cor03);}
+}
+
+ * {      /*Configuração global*/
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -27,6 +43,16 @@ body { /*Corpo*/
 
 body p { /*Paragráfos do corpo*/
     text-indent: 40px; /*Indentação*/
+}
+
+#fotoTittleInicial {
+    display: inline-table;
+    flex-wrap: wrap;
+}
+
+#fotoIsaiasInicio {
+    float: left;
+    left: 0%;
 }
 
 
@@ -74,30 +100,105 @@ main { /*Conteúdo do corpo*/
     min-width: 280px; /*Largura mínima*/
     max-width: 900px; /*Largura máxima*/
     margin: auto; /*Margem externa(auto para centralizar)*/
-    padding: 20px; /*Margem interna*/
+    padding: 60px; /*Margem interna*/
     margin-bottom: 30px; /*Margem externa inferior*/
     box-shadow: 0px 0px 10px var(--cor03); /*Sombra*/
     border-radius: 0px 0px 15px 15px; /*Deixar vertices arredondados*/
 }
 
-#logos { /*Imagem logos*/
-    max-width: 80%; /*Largura máxima*/
-    height: 200px; /*Atura*/
+/*  ##### Página inicial ##### */
+
+.pagina-inicial { /*Are sobre  mim (minha história)*/
+    display: inline-table ;  /*Deixar conteúdo lado a lado na caixa*/
+    padding: 10px; /*Margem interna*/
+}
+.pagina-inicial a {
+    text-decoration: none;
+    color: var(--cor03);
+}
+
+.pagina-inicial a:hover {
+    text-decoration: underline;
+    color: var(--cor00);
+}
+
+
+.imgInicialEsquerda { /*Foto Isaias*/
+    float: left; /*Posicionar a esquerda do elemento pai*/
+    width: 100px; /*Largura*/
+    height: 120px; /*Altura*/
+    padding: 4px; /*Margem interna*/
+    margin: 0px 0px 0px -63px; /* Margem externa */
+    /*transform: rotate(26deg); Rotação*/
+    box-shadow: 4px 4px 10px black; /*Sombra*/
+    border-radius: 25px 0px 25px 0px; /*Arredondar vertices*/
+    animation-name: animationEsq; /*Nome da animação*/
+    animation-duration: 5s; /*Duração animação*/
+    animation-delay: -0.5s; /*Início animação*/
+    animation-iteration-count: infinite; /*Duração animação*/
+    
+}
+
+.imgInicialDireita { /*Foto família*/
+    float: right; /*Posicionar a direita do elemento pai */
+    width: 100px; /*Largura*/
+    height: 120px; /*Altura*/
+    padding: 4px; /*Margem interna*/
+    margin: 0px -63px 0px 0px; /* Margem externa */
+    /*transform: rotate(-25deg); Rotação*/
+    box-shadow: 3px 4px 10px black; /*Sombra*/
+    border-radius: 0px 25px 0px 25px; /*Arredondar vertices*/
+    animation-name: animationDir; /*Nome da animação*/
+    animation-duration: 5s; /*Duração animação*/
+    animation-delay: -0.5s; /*Início animação*/
+    animation-iteration-count: infinite; /*Duração animação*/
+}
+
+/* #######  Formulário página inicial  ########  */
+
+#formPgInicial { /*Formulário página inícial*/
+    width: 95%; /*Largura*/
     margin: auto; /*Margem externa*/
-    padding: 20px; /*Margem interna*/
-    position: relative; /*Posição relativa em relação ao pai*/
-    display: block; /*Display em bloco*/  
+    padding: 5px; /*Margem interna*/
+    border-radius: 10px; /*Arredondar vertices*/
+    text-align: center; /*Centralizar texto*/
+    animation-name: pisca-pisca;
+    animation-duration: 2s; /*Duração animação*/
+    animation-delay: -0.5s; /*Início animação*/
+    animation-iteration-count: infinite; /*Duração animação*/
+}
+
+.inicio-tel-email {
+    border-radius: 0px 6px 6px 0px; /*Arredondar vertices*/
+    color: var(--cor01); /*Cor da fonte*/
+    background-color: var(--cor00); /*Cor de fundo*/
+    font-weight: bolder; /*Deixar texto negrito*/
+    border: none; /*Tirar borda*/
+    cursor: pointer; /*Mostrar mãozinha quanto o mouse passar por cima*/
+    margin: 4px 1px ; /*Margem externa*/
+    padding: 4px 0px;
+    width: 100px; /*Largura*/
+}
+
+.inicio-tel-email:hover { /*Ao passar o mouse*/
+    box-shadow: 3px 3px 6px var(--cor03); /*Sombra*/
+}
+
+.inicio-email-tel { /*Área para preencher contato*/
+      margin: auto -6px; /*Margem*/
+      border-right: none; /*Borda direita*/
+      padding: 3px 1px; /*Margem*/
 }
 
 /*  ########### Página portifólio ##########*/
 
 #projetos { /*Área projeto (em cima video)*/
     /*background-image: linear-gradient(to top, var(--cor02) , var(--cor00));*/ /*Fundo degradê*/
-    padding: 15px;
+    padding: 15px; /*Margem interna*/
     border-radius: 15px; /*Arredondar vertices*/
     box-shadow: 0px 0px 7px var(--cor03); /*Sombra*/
     text-align: center; /*Centrar texto*/
-    margin: auto;
+    margin: auto; /*Margem externa*/
 }
 
 #principal { /*Espaço principal/projeto principal*/
@@ -266,7 +367,7 @@ main { /*Conteúdo do corpo*/
     border-radius: 10px;  /*Arredondar bordas*/
 }
 
-/* ###########  FORMULÁRIO ########## */
+/* ###########  FORMULÁRIO contato  ########## */
 form {
     /* Apenas para centralizar o form na página */
     margin: 0 auto;

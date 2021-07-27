@@ -9,8 +9,8 @@
   </head>
   <body>
         <header>
-          <div>
-            <h1>Desenvolvedor Web</h1> 
+          <div id="fotoTittleInicial">
+            <h1><img style="width: 100px; height: 100px;" id="fotoIsaiasInicio" src="./img/isaias-cm.png" alt="Foto Isaias">Desenvolvedor Web</h1> 
           </div>
           <p>Buscando um novo desafio | HTML | CSS | JAVASCRIPT | GITHUB | MYSQL</p>
         </header>
@@ -23,29 +23,42 @@
         </div>
       </nav>
       <main>
-      <div class="Introdução">
-        <h1>Sobre</h1>
-        <p>
-          Por muito tempo atuei no ramo comercial e transportes e aos 35 anos, algo me fez mudar completamente o rumo de minha vida profissional. Bastou apenas um pequeno contato com desenvolvimento tecnológico para me fazer criar uma forte atração por tecnologia.
-          Hoje sou estudante de Análise e desenvolvimento de sistemas na qual aprendi muitas coisas (não que seja o suficiente pois nunca é), mas assim como tudo na vida precisamos de desafios para nos manter sempre nos dispostos.
-
-          Posso dizer que aos 35 anos descobrir o que realmente move o meu lado profissional, me inspirando a cada novo aprendizado.
-        </p><br>
-        <h2>Principais tecnologias que desenvolvo:</h2><br>
-        <p>Este site foi foi devenvolvido com <abbr title="Linguagem de Marcação de Hipertexto">HTML5</abbr>, <abbr title="Folha de Estilo em Cascata">CSS3</abbr> e <abbr title="Linguagem de programação">JavaScript</abbr>.Subi para o repositório do <abbr title="Plataforma de hospedagem de código-fonte e arquivos com controle de versão">GitHub</abbr> todo conteúdo do código fonte. Sobre o <abbr title="Sistema de gerenciamento de banco de dados (Linguagem de Consulta Estruturada)">MySql</abbr> ainda não fiz o armazenamento no banco de dados, mas isso será o próximo passo deste projeto.</p>
-        <picture>
-          <source media="(max-width: 400px)" srcset="./img/todos-p.png">
-          <img id="logos" src="./img/todos.png" alt="tecnologias">
-        </picture>
-        <p>É realmente incrível o poder e as possibilidades que essas tecnologias nos proporcionam. A cada aprendizado me sinto maravilhado.</p><br>
-      </div>
-      <section>
-        <h2>Expectavitas</h2>
-        <p>Por mais que eu não tenha uma experiência profissional em tecnologia, estou me decicando muito em meus estudos, não apenas nas materias e diciplinas abordadas pela universidade na qual estou matriculado, mas empre procuro me aperfeiçoando em cursos paralelos. Tenho alguns pequenos projetos prontos e outros em andamento.</p>
-        <p>Atualmente não estou trabalhando, pois a empresa na qual trabalhava abril PDV na planta de São José dos Campos-SP, onde resido atualmente.</p>
-        <p>Estou aproveitando todo esse tempo livre para me decicar em aprender cada vez mais. Talvez não seja apenas comigo que acontece mas não como explicar, quanto mais eu aprendo, mais vontade eu tenho de aprender! Talvez isso seja típico de todos que estão nesse ramo.</p>
-      </section>
-    </main>
+          <article class="pagina-inicial">
+            <h1>Resumo</h1>
+            <br>
+            <p><img class="imgInicialDireita" src="./img/logo-html.png" alt="Logo HTML5">Profissional em inicio de carreira na área de T.I com mais de 20 anos de experiência no mercado de trabalho atuando em outras áreas.</p>
+            <br>
+            <p>Atualmente iniciando carreira no ramo tecnológico, onde tenho vários projetos concluídos e em andamento, que estão todos em meu repositório do GitHub.</p> 
+            <br>
+            <p>Tenho mais de cinco anos de experiência em transportes, na qual pude absorver o máximo em aprendizados e conhecimentos se relacionando diretamente com gestores de várias empresas em diversos estados do  Brasil, <img class="imgInicialEsquerda" src="./img/logo-css3.png" alt="Logo CSS3"> para juntos resolvermos quaisquer imprevistos relacionados ao transporte e a logística das cargas.</p>
+            <br>
+            <p>No varejo, onde atuei por mais de quinze anos, <img class="imgInicialDireita" src="./img/logo-js.png" alt="Logo JavaScript"> desenvolvi atividades das mais diversas desde os cargos mais simples até o cargo de gerente de loja que foi o último cargo da área. Desenvolvia soluções conjuntas para melhorar o ticket médio monitorando resultados e implantando procedimentos padronizados. Auxiliava em diversos setores de forma proativa e eficiente sempre pensando na segurança de todos se relacionando de maneira empática com clientes e membros da equipe.</p> 
+            <br>
+          </article>
+          <section class="pagina-inicial">
+            <h3>Conquistas</h3>
+            <br>
+            <p><img class="imgInicialEsquerda" src="./img/logo-github.png" alt="GitHub">Através de iniciativas conjuntas de esforços, aprendizados e persistência, consegui desenvolvi este simples site e outros projetos com as tecnologias que aprendi conforme cada aprendizado. </p>
+            <br>
+             <p>Assim como descrito mais acima, tenho vários projetos concluídos e outros em desenvolvimento no meu repositório do <a href="https://github.com/IsaiasSantanaDosSantos" target="_blank" rel="external">GitHub</a>. <img class="imgInicialDireita" src="./img/logo-mysql.png" alt="MySql"> São projetos desenvolvidos com as tecnologias na qual já tenho um certo grau de domínio, me sentindo à vontade e seguro para desenvolve-lôs.</p>
+            <p>Caso queira conhecer um pouco mais <a href="./sobremim.html">sobre mim</a>, sobre <a href="./portifolio.html">meus conhecimentos e projetos</a> ou caso queira  <a href="./contato.html">entrar emcontato</a>, será um prazer poder trocar experiências e conhece-lo.</p>
+            <br> <br>
+          </section>
+          <span>
+            <br>
+             <div id="formPgInicial">
+              <h3 style="text-align: center;">RECEBA MINHAS UPDATE NEWS</h3>
+               <div>
+                <input type="email" class="inicio-email-tel" placeholder="Seu e-mail " />
+                <input type="button" value="Cadastrar" class="inicio-tel-email" onclick="cadastrarEmailInicial()">
+               </div>
+               <div>
+                <input type="tel" class="inicio-email-tel" placeholder="Número WhatsApp c/ DDD "/>
+                <input type="button" value="Cadastrar" onclick="cadastrarZapPgInicial()" class="inicio-tel-email">
+               </div>
+              </div>
+          </span>
+      </main>
       <footer>
         <div id="rodape">
          <p>&copy; - 2021 Desevenvolvido por <a href="#">Isaias Santana dos Santos</a></p>
